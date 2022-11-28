@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reinvent2022demo-staging-220045-authRole",
+      "UnauthRoleArn": "arn:aws:iam::447196829869:role/amplify-reinvent2022demo-staging-220045-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::447196829869:role/amplify-reinvent2022demo-staging-220045-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reinvent2022demo-staging-220045-deployment",
+      "UnauthRoleName": "amplify-reinvent2022demo-staging-220045-unauthRole",
+      "StackName": "amplify-reinvent2022demo-staging-220045",
+      "StackId": "arn:aws:cloudformation:us-east-1:447196829869:stack/amplify-reinvent2022demo-staging-220045/1c301af0-6f68-11ed-ba25-0ac036f83859",
+      "AmplifyAppId": "ddihkngjluz2f"
+    },
+    "categories": {
+      "auth": {
+        "ReInvent2022Demo": {}
+      }
+    }
+  }
+}
