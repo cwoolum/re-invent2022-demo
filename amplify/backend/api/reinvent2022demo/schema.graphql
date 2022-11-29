@@ -1,0 +1,10 @@
+type Recommendation @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  description: String
+  address: String
+  lat: Float
+  long: Float
+  coverImage: AWSURL
+}
+ 

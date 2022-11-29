@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "ReInvent2022Demo": {}
+      },
+      "api": {
+        "reinvent2022demo": {}
+      },
+      "geo": {
+        "mapf6de3e09": {}
       }
     }
   }
