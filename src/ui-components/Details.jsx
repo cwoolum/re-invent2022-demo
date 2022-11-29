@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Heading, Image, Text } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function Details(props) {
-  const { overrides, ...rest } = props;
+  const { recommendation, overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -40,6 +40,7 @@ export default function Details(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={recommendation?.coverImage}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -88,7 +89,7 @@ export default function Details(props) {
             shrink="1"
             basis="0"
             level="3"
-            children="Name"
+            children={recommendation?.name}
             {...getOverrideProps(overrides, "Heading30663197")}
           ></Heading>
         </Flex>
@@ -125,7 +126,7 @@ export default function Details(props) {
             shrink="1"
             basis="0"
             level="6"
-            children="Address"
+            children={recommendation?.address}
             {...getOverrideProps(overrides, "Heading30663204")}
           ></Heading>
         </Flex>
@@ -148,7 +149,7 @@ export default function Details(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Description"
+          children={recommendation?.description}
           {...getOverrideProps(overrides, "Description")}
         ></Text>
       </Flex>
