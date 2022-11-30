@@ -1,6 +1,0 @@
-{
-  "AppSyncApiName": "reinvent2022demo",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2022-11-29T02:00:59.550Z"
-}
