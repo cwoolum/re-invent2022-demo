@@ -34,6 +34,7 @@ export declare type RecommendationCreateFormOverridesProps = {
     name?: FormProps<TextFieldProps>;
     description?: FormProps<TextFieldProps>;
     address?: FormProps<TextFieldProps>;
+    RowGrid3?: FormProps<GridProps>;
     lat?: FormProps<TextFieldProps>;
     long?: FormProps<TextFieldProps>;
     coverImage?: FormProps<TextFieldProps>;

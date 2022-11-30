@@ -205,80 +205,87 @@ export default function RecommendationCreateForm(props) {
         hasError={errors.address?.hasError}
         {...getOverrideProps(overrides, "address")}
       ></TextField>
-      <TextField
-        label="Lat"
-        isRequired={false}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        onChange={(e) => {
-          let value = Number(e.target.value);
-          if (isNaN(value)) {
-            setErrors((errors) => ({
-              ...errors,
-              lat: "Value must be a valid number",
-            }));
-            return;
-          }
-          if (onChange) {
-            const modelFields = {
-              name,
-              description,
-              address,
-              lat: value,
-              long,
-              coverImage,
-            };
-            const result = onChange(modelFields);
-            value = result?.lat ?? value;
-          }
-          if (errors.lat?.hasError) {
-            runValidationTasks("lat", value);
-          }
-          setLat(value);
-        }}
-        onBlur={() => runValidationTasks("lat", lat)}
-        errorMessage={errors.lat?.errorMessage}
-        hasError={errors.lat?.hasError}
-        {...getOverrideProps(overrides, "lat")}
-      ></TextField>
-      <TextField
-        label="Long"
-        isRequired={false}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        onChange={(e) => {
-          let value = Number(e.target.value);
-          if (isNaN(value)) {
-            setErrors((errors) => ({
-              ...errors,
-              long: "Value must be a valid number",
-            }));
-            return;
-          }
-          if (onChange) {
-            const modelFields = {
-              name,
-              description,
-              address,
-              lat,
-              long: value,
-              coverImage,
-            };
-            const result = onChange(modelFields);
-            value = result?.long ?? value;
-          }
-          if (errors.long?.hasError) {
-            runValidationTasks("long", value);
-          }
-          setLong(value);
-        }}
-        onBlur={() => runValidationTasks("long", long)}
-        errorMessage={errors.long?.errorMessage}
-        hasError={errors.long?.hasError}
-        {...getOverrideProps(overrides, "long")}
-      ></TextField>
+      <Grid
+        columnGap="inherit"
+        rowGap="inherit"
+        templateColumns="repeat(2, auto)"
+        {...getOverrideProps(overrides, "RowGrid3")}
+      >
+        <TextField
+          label="Latitude"
+          isRequired={false}
+          isReadOnly={false}
+          type="number"
+          step="any"
+          onChange={(e) => {
+            let value = Number(e.target.value);
+            if (isNaN(value)) {
+              setErrors((errors) => ({
+                ...errors,
+                lat: "Value must be a valid number",
+              }));
+              return;
+            }
+            if (onChange) {
+              const modelFields = {
+                name,
+                description,
+                address,
+                lat: value,
+                long,
+                coverImage,
+              };
+              const result = onChange(modelFields);
+              value = result?.lat ?? value;
+            }
+            if (errors.lat?.hasError) {
+              runValidationTasks("lat", value);
+            }
+            setLat(value);
+          }}
+          onBlur={() => runValidationTasks("lat", lat)}
+          errorMessage={errors.lat?.errorMessage}
+          hasError={errors.lat?.hasError}
+          {...getOverrideProps(overrides, "lat")}
+        ></TextField>
+        <TextField
+          label="Longitude"
+          isRequired={false}
+          isReadOnly={false}
+          type="number"
+          step="any"
+          onChange={(e) => {
+            let value = Number(e.target.value);
+            if (isNaN(value)) {
+              setErrors((errors) => ({
+                ...errors,
+                long: "Value must be a valid number",
+              }));
+              return;
+            }
+            if (onChange) {
+              const modelFields = {
+                name,
+                description,
+                address,
+                lat,
+                long: value,
+                coverImage,
+              };
+              const result = onChange(modelFields);
+              value = result?.long ?? value;
+            }
+            if (errors.long?.hasError) {
+              runValidationTasks("long", value);
+            }
+            setLong(value);
+          }}
+          onBlur={() => runValidationTasks("long", long)}
+          errorMessage={errors.long?.errorMessage}
+          hasError={errors.long?.hasError}
+          {...getOverrideProps(overrides, "long")}
+        ></TextField>
+      </Grid>
       <TextField
         label="Cover image"
         isRequired={false}
