@@ -13,7 +13,9 @@ function App() {
     <div className="App">
       Navigation bar goes here.
       <Flex overflow="auto">
-        <View>Locations go here.</View>
+        <View className="recommendation-menu">
+          Locations go here.
+        </View>
         <Flex position="relative" overflow="hidden" grow={1}>
           Map/Rocket goes here.
         </Flex>
