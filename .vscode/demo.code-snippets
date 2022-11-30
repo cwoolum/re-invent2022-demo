@@ -38,5 +38,15 @@
     "prefix": "marker",
     "body": ["import { Marker } from \"react-map-gl\";"],
     "description": "Marker Imports"
+  },
+  "Details View": {
+    "scope": "javascript,typescript",
+    "prefix": "details",
+    "body": [
+      "<View className={`details ${selection ? \"\" : \"hidden\"}`}>",
+      "<Details recommendation={selection}></Details>",
+      "</View>"
+    ],
+    "description": "Marker Imports"
   }
 }
