@@ -1,3 +1,9 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -12,7 +18,7 @@
 .details {
   position: absolute;
   bottom: 20px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   left: 0;
   right: 0;
   display: flex;
@@ -20,7 +26,7 @@
 }
 
 .hidden {
-  bottom: -800px; 
+  bottom: -800px;
 }
 
 .mapboxgl-map {
