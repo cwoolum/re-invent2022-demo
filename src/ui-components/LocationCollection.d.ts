@@ -5,12 +5,16 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Recommendation } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type LocationProps = React.PropsWithChildren<Partial<FlexProps> & {
-    recommendation?: Recommendation;
+import { LocationProps } from "./Location";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type LocationCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => LocationProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Location(props: LocationProps): React.ReactElement;
+export default function LocationCollection(props: LocationCollectionProps): React.ReactElement;

@@ -33,3 +33,9 @@ body {
   height: 100% !important;
   width: 100% !important;
 }
+
+.recommendation-menu {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 12px;
+}
