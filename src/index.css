@@ -39,3 +39,10 @@ body {
   flex-direction: column;
   grid-gap: 12px;
 }
+
+.form-wrapper-inner {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+}

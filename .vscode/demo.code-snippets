@@ -48,5 +48,17 @@
       "</View>"
     ],
     "description": "Marker Imports"
+  },
+  "Create Form": {
+    "scope": "javascript,typescript",
+    "prefix": "form",
+    "body": [
+      "<Flex justifyContent={'center'}>",
+      "<div className=\"form-wrapper-inner\">",
+      "<RecommendationCreateForm />",
+      "</div>",
+      "</Flex>"
+    ],
+    "description": "Marker Imports"
   }
 }
